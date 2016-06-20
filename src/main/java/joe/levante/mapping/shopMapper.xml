@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="joe.levante.dao.shopMapper" >
+  <resultMap id="BaseResultMap" type="joe.levante.model.shop" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="userid" property="userid" jdbcType="INTEGER" />
+    <result column="area" property="area" jdbcType="VARCHAR" />
+    <result column="shopaddress" property="shopaddress" jdbcType="VARCHAR" />
+    <result column="shopbrand" property="shopbrand" jdbcType="VARCHAR" />
+    <result column="applytime" property="applytime" jdbcType="TIMESTAMP" />
+    <result column="shopname" property="shopname" jdbcType="VARCHAR" />
+    <result column="orgnumber" property="orgnumber" jdbcType="VARCHAR" />
+    <result column="incorporator" property="incorporator" jdbcType="VARCHAR" />
+    <result column="phone" property="phone" jdbcType="VARCHAR" />
+    <result column="verifytime" property="verifytime" jdbcType="DATE" />
+    <result column="checkpeople" property="checkpeople" jdbcType="VARCHAR" />
+    <result column="undonecause" property="undonecause" jdbcType="VARCHAR" />
+    <result column="verifystatus" property="verifystatus" jdbcType="INTEGER" />
+    <result column="reducepoint" property="reducepoint" jdbcType="DECIMAL" />
+    <result column="shoptype" property="shoptype" jdbcType="VARCHAR" />
+  </resultMap>
+  <resultMap id="ResultMapWithBLOBs" type="joe.levante.model.shop" extends="BaseResultMap" >
+    <result column="image" property="image" jdbcType="LONGVARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, userid, area, shopaddress, shopbrand, applytime, shopname, orgnumber, incorporator, 
+    phone, verifytime, checkpeople, undonecause, verifystatus, reducepoint, shoptype
+  </sql>
+  <sql id="Blob_Column_List" >
+    image
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="ResultMapWithBLOBs" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    ,
+    <include refid="Blob_Column_List" />
+    from shop
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from shop
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="joe.levante.model.shop" >
+    insert into shop (id, userid, area, 
+      shopaddress, shopbrand, applytime, 
+      shopname, orgnumber, incorporator, 
+      phone, verifytime, checkpeople, 
+      undonecause, verifystatus, reducepoint, 
+      shoptype, image)
+    values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{area,jdbcType=VARCHAR}, 
+      #{shopaddress,jdbcType=VARCHAR}, #{shopbrand,jdbcType=VARCHAR}, #{applytime,jdbcType=TIMESTAMP}, 
+      #{shopname,jdbcType=VARCHAR}, #{orgnumber,jdbcType=VARCHAR}, #{incorporator,jdbcType=VARCHAR}, 
+      #{phone,jdbcType=VARCHAR}, #{verifytime,jdbcType=DATE}, #{checkpeople,jdbcType=VARCHAR}, 
+      #{undonecause,jdbcType=VARCHAR}, #{verifystatus,jdbcType=INTEGER}, #{reducepoint,jdbcType=DECIMAL}, 
+      #{shoptype,jdbcType=VARCHAR}, #{image,jdbcType=LONGVARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="joe.levante.model.shop" >
+    insert into shop
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="area != null" >
+        area,
+      </if>
+      <if test="shopaddress != null" >
+        shopaddress,
+      </if>
+      <if test="shopbrand != null" >
+        shopbrand,
+      </if>
+      <if test="applytime != null" >
+        applytime,
+      </if>
+      <if test="shopname != null" >
+        shopname,
+      </if>
+      <if test="orgnumber != null" >
+        orgnumber,
+      </if>
+      <if test="incorporator != null" >
+        incorporator,
+      </if>
+      <if test="phone != null" >
+        phone,
+      </if>
+      <if test="verifytime != null" >
+        verifytime,
+      </if>
+      <if test="checkpeople != null" >
+        checkpeople,
+      </if>
+      <if test="undonecause != null" >
+        undonecause,
+      </if>
+      <if test="verifystatus != null" >
+        verifystatus,
+      </if>
+      <if test="reducepoint != null" >
+        reducepoint,
+      </if>
+      <if test="shoptype != null" >
+        shoptype,
+      </if>
+      <if test="image != null" >
+        image,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="area != null" >
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="shopaddress != null" >
+        #{shopaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="shopbrand != null" >
+        #{shopbrand,jdbcType=VARCHAR},
+      </if>
+      <if test="applytime != null" >
+        #{applytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="shopname != null" >
+        #{shopname,jdbcType=VARCHAR},
+      </if>
+      <if test="orgnumber != null" >
+        #{orgnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="incorporator != null" >
+        #{incorporator,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="verifytime != null" >
+        #{verifytime,jdbcType=DATE},
+      </if>
+      <if test="checkpeople != null" >
+        #{checkpeople,jdbcType=VARCHAR},
+      </if>
+      <if test="undonecause != null" >
+        #{undonecause,jdbcType=VARCHAR},
+      </if>
+      <if test="verifystatus != null" >
+        #{verifystatus,jdbcType=INTEGER},
+      </if>
+      <if test="reducepoint != null" >
+        #{reducepoint,jdbcType=DECIMAL},
+      </if>
+      <if test="shoptype != null" >
+        #{shoptype,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null" >
+        #{image,jdbcType=LONGVARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="joe.levante.model.shop" >
+    update shop
+    <set >
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="area != null" >
+        area = #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="shopaddress != null" >
+        shopaddress = #{shopaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="shopbrand != null" >
+        shopbrand = #{shopbrand,jdbcType=VARCHAR},
+      </if>
+      <if test="applytime != null" >
+        applytime = #{applytime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="shopname != null" >
+        shopname = #{shopname,jdbcType=VARCHAR},
+      </if>
+      <if test="orgnumber != null" >
+        orgnumber = #{orgnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="incorporator != null" >
+        incorporator = #{incorporator,jdbcType=VARCHAR},
+      </if>
+      <if test="phone != null" >
+        phone = #{phone,jdbcType=VARCHAR},
+      </if>
+      <if test="verifytime != null" >
+        verifytime = #{verifytime,jdbcType=DATE},
+      </if>
+      <if test="checkpeople != null" >
+        checkpeople = #{checkpeople,jdbcType=VARCHAR},
+      </if>
+      <if test="undonecause != null" >
+        undonecause = #{undonecause,jdbcType=VARCHAR},
+      </if>
+      <if test="verifystatus != null" >
+        verifystatus = #{verifystatus,jdbcType=INTEGER},
+      </if>
+      <if test="reducepoint != null" >
+        reducepoint = #{reducepoint,jdbcType=DECIMAL},
+      </if>
+      <if test="shoptype != null" >
+        shoptype = #{shoptype,jdbcType=VARCHAR},
+      </if>
+      <if test="image != null" >
+        image = #{image,jdbcType=LONGVARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKeyWithBLOBs" parameterType="joe.levante.model.shop" >
+    update shop
+    set userid = #{userid,jdbcType=INTEGER},
+      area = #{area,jdbcType=VARCHAR},
+      shopaddress = #{shopaddress,jdbcType=VARCHAR},
+      shopbrand = #{shopbrand,jdbcType=VARCHAR},
+      applytime = #{applytime,jdbcType=TIMESTAMP},
+      shopname = #{shopname,jdbcType=VARCHAR},
+      orgnumber = #{orgnumber,jdbcType=VARCHAR},
+      incorporator = #{incorporator,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      verifytime = #{verifytime,jdbcType=DATE},
+      checkpeople = #{checkpeople,jdbcType=VARCHAR},
+      undonecause = #{undonecause,jdbcType=VARCHAR},
+      verifystatus = #{verifystatus,jdbcType=INTEGER},
+      reducepoint = #{reducepoint,jdbcType=DECIMAL},
+      shoptype = #{shoptype,jdbcType=VARCHAR},
+      image = #{image,jdbcType=LONGVARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="joe.levante.model.shop" >
+    update shop
+    set userid = #{userid,jdbcType=INTEGER},
+      area = #{area,jdbcType=VARCHAR},
+      shopaddress = #{shopaddress,jdbcType=VARCHAR},
+      shopbrand = #{shopbrand,jdbcType=VARCHAR},
+      applytime = #{applytime,jdbcType=TIMESTAMP},
+      shopname = #{shopname,jdbcType=VARCHAR},
+      orgnumber = #{orgnumber,jdbcType=VARCHAR},
+      incorporator = #{incorporator,jdbcType=VARCHAR},
+      phone = #{phone,jdbcType=VARCHAR},
+      verifytime = #{verifytime,jdbcType=DATE},
+      checkpeople = #{checkpeople,jdbcType=VARCHAR},
+      undonecause = #{undonecause,jdbcType=VARCHAR},
+      verifystatus = #{verifystatus,jdbcType=INTEGER},
+      reducepoint = #{reducepoint,jdbcType=DECIMAL},
+      shoptype = #{shoptype,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

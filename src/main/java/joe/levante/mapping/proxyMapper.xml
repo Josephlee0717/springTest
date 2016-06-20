@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="joe.levante.dao.proxyMapper" >
+  <resultMap id="BaseResultMap" type="joe.levante.model.proxy" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="proxyid" property="proxyid" jdbcType="INTEGER" />
+    <result column="area" property="area" jdbcType="VARCHAR" />
+    <result column="proxyshare" property="proxyshare" jdbcType="DOUBLE" />
+    <result column="areausernumber" property="areausernumber" jdbcType="INTEGER" />
+    <result column="areashopnumber" property="areashopnumber" jdbcType="INTEGER" />
+    <result column="monthtransac" property="monthtransac" jdbcType="DOUBLE" />
+    <result column="monthlypayment" property="monthlypayment" jdbcType="DOUBLE" />
+    <result column="whetherproxy" property="whetherproxy" jdbcType="VARCHAR" />
+    <result column="verifytime" property="verifytime" jdbcType="DATE" />
+    <result column="checkpeople" property="checkpeople" jdbcType="VARCHAR" />
+    <result column="undonecause" property="undonecause" jdbcType="VARCHAR" />
+    <result column="verifystatus" property="verifystatus" jdbcType="TINYINT" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, proxyid, area, proxyshare, areausernumber, areashopnumber, monthtransac, monthlypayment, 
+    whetherproxy, verifytime, checkpeople, undonecause, verifystatus
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from proxy
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from proxy
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="joe.levante.model.proxy" >
+    insert into proxy (id, proxyid, area, 
+      proxyshare, areausernumber, areashopnumber, 
+      monthtransac, monthlypayment, whetherproxy, 
+      verifytime, checkpeople, undonecause, 
+      verifystatus)
+    values (#{id,jdbcType=INTEGER}, #{proxyid,jdbcType=INTEGER}, #{area,jdbcType=VARCHAR}, 
+      #{proxyshare,jdbcType=DOUBLE}, #{areausernumber,jdbcType=INTEGER}, #{areashopnumber,jdbcType=INTEGER}, 
+      #{monthtransac,jdbcType=DOUBLE}, #{monthlypayment,jdbcType=DOUBLE}, #{whetherproxy,jdbcType=VARCHAR}, 
+      #{verifytime,jdbcType=DATE}, #{checkpeople,jdbcType=VARCHAR}, #{undonecause,jdbcType=VARCHAR}, 
+      #{verifystatus,jdbcType=TINYINT})
+  </insert>
+  <insert id="insertSelective" parameterType="joe.levante.model.proxy" >
+    insert into proxy
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="proxyid != null" >
+        proxyid,
+      </if>
+      <if test="area != null" >
+        area,
+      </if>
+      <if test="proxyshare != null" >
+        proxyshare,
+      </if>
+      <if test="areausernumber != null" >
+        areausernumber,
+      </if>
+      <if test="areashopnumber != null" >
+        areashopnumber,
+      </if>
+      <if test="monthtransac != null" >
+        monthtransac,
+      </if>
+      <if test="monthlypayment != null" >
+        monthlypayment,
+      </if>
+      <if test="whetherproxy != null" >
+        whetherproxy,
+      </if>
+      <if test="verifytime != null" >
+        verifytime,
+      </if>
+      <if test="checkpeople != null" >
+        checkpeople,
+      </if>
+      <if test="undonecause != null" >
+        undonecause,
+      </if>
+      <if test="verifystatus != null" >
+        verifystatus,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="proxyid != null" >
+        #{proxyid,jdbcType=INTEGER},
+      </if>
+      <if test="area != null" >
+        #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="proxyshare != null" >
+        #{proxyshare,jdbcType=DOUBLE},
+      </if>
+      <if test="areausernumber != null" >
+        #{areausernumber,jdbcType=INTEGER},
+      </if>
+      <if test="areashopnumber != null" >
+        #{areashopnumber,jdbcType=INTEGER},
+      </if>
+      <if test="monthtransac != null" >
+        #{monthtransac,jdbcType=DOUBLE},
+      </if>
+      <if test="monthlypayment != null" >
+        #{monthlypayment,jdbcType=DOUBLE},
+      </if>
+      <if test="whetherproxy != null" >
+        #{whetherproxy,jdbcType=VARCHAR},
+      </if>
+      <if test="verifytime != null" >
+        #{verifytime,jdbcType=DATE},
+      </if>
+      <if test="checkpeople != null" >
+        #{checkpeople,jdbcType=VARCHAR},
+      </if>
+      <if test="undonecause != null" >
+        #{undonecause,jdbcType=VARCHAR},
+      </if>
+      <if test="verifystatus != null" >
+        #{verifystatus,jdbcType=TINYINT},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="joe.levante.model.proxy" >
+    update proxy
+    <set >
+      <if test="proxyid != null" >
+        proxyid = #{proxyid,jdbcType=INTEGER},
+      </if>
+      <if test="area != null" >
+        area = #{area,jdbcType=VARCHAR},
+      </if>
+      <if test="proxyshare != null" >
+        proxyshare = #{proxyshare,jdbcType=DOUBLE},
+      </if>
+      <if test="areausernumber != null" >
+        areausernumber = #{areausernumber,jdbcType=INTEGER},
+      </if>
+      <if test="areashopnumber != null" >
+        areashopnumber = #{areashopnumber,jdbcType=INTEGER},
+      </if>
+      <if test="monthtransac != null" >
+        monthtransac = #{monthtransac,jdbcType=DOUBLE},
+      </if>
+      <if test="monthlypayment != null" >
+        monthlypayment = #{monthlypayment,jdbcType=DOUBLE},
+      </if>
+      <if test="whetherproxy != null" >
+        whetherproxy = #{whetherproxy,jdbcType=VARCHAR},
+      </if>
+      <if test="verifytime != null" >
+        verifytime = #{verifytime,jdbcType=DATE},
+      </if>
+      <if test="checkpeople != null" >
+        checkpeople = #{checkpeople,jdbcType=VARCHAR},
+      </if>
+      <if test="undonecause != null" >
+        undonecause = #{undonecause,jdbcType=VARCHAR},
+      </if>
+      <if test="verifystatus != null" >
+        verifystatus = #{verifystatus,jdbcType=TINYINT},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="joe.levante.model.proxy" >
+    update proxy
+    set proxyid = #{proxyid,jdbcType=INTEGER},
+      area = #{area,jdbcType=VARCHAR},
+      proxyshare = #{proxyshare,jdbcType=DOUBLE},
+      areausernumber = #{areausernumber,jdbcType=INTEGER},
+      areashopnumber = #{areashopnumber,jdbcType=INTEGER},
+      monthtransac = #{monthtransac,jdbcType=DOUBLE},
+      monthlypayment = #{monthlypayment,jdbcType=DOUBLE},
+      whetherproxy = #{whetherproxy,jdbcType=VARCHAR},
+      verifytime = #{verifytime,jdbcType=DATE},
+      checkpeople = #{checkpeople,jdbcType=VARCHAR},
+      undonecause = #{undonecause,jdbcType=VARCHAR},
+      verifystatus = #{verifystatus,jdbcType=TINYINT}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

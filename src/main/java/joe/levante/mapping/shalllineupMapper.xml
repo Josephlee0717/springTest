@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="joe.levante.dao.shalllineupMapper" >
+  <resultMap id="BaseResultMap" type="joe.levante.model.shalllineup" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="paytimecalc" property="paytimecalc" jdbcType="VARCHAR" />
+    <result column="lineupnumber" property="lineupnumber" jdbcType="VARCHAR" />
+    <result column="lineupmoney" property="lineupmoney" jdbcType="DOUBLE" />
+    <result column="lineuptime" property="lineuptime" jdbcType="DATE" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, paytimecalc, lineupnumber, lineupmoney, lineuptime
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from shalllineup
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from shalllineup
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="joe.levante.model.shalllineup" >
+    insert into shalllineup (id, paytimecalc, lineupnumber, 
+      lineupmoney, lineuptime)
+    values (#{id,jdbcType=INTEGER}, #{paytimecalc,jdbcType=VARCHAR}, #{lineupnumber,jdbcType=VARCHAR}, 
+      #{lineupmoney,jdbcType=DOUBLE}, #{lineuptime,jdbcType=DATE})
+  </insert>
+  <insert id="insertSelective" parameterType="joe.levante.model.shalllineup" >
+    insert into shalllineup
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="paytimecalc != null" >
+        paytimecalc,
+      </if>
+      <if test="lineupnumber != null" >
+        lineupnumber,
+      </if>
+      <if test="lineupmoney != null" >
+        lineupmoney,
+      </if>
+      <if test="lineuptime != null" >
+        lineuptime,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="paytimecalc != null" >
+        #{paytimecalc,jdbcType=VARCHAR},
+      </if>
+      <if test="lineupnumber != null" >
+        #{lineupnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="lineupmoney != null" >
+        #{lineupmoney,jdbcType=DOUBLE},
+      </if>
+      <if test="lineuptime != null" >
+        #{lineuptime,jdbcType=DATE},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="joe.levante.model.shalllineup" >
+    update shalllineup
+    <set >
+      <if test="paytimecalc != null" >
+        paytimecalc = #{paytimecalc,jdbcType=VARCHAR},
+      </if>
+      <if test="lineupnumber != null" >
+        lineupnumber = #{lineupnumber,jdbcType=VARCHAR},
+      </if>
+      <if test="lineupmoney != null" >
+        lineupmoney = #{lineupmoney,jdbcType=DOUBLE},
+      </if>
+      <if test="lineuptime != null" >
+        lineuptime = #{lineuptime,jdbcType=DATE},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="joe.levante.model.shalllineup" >
+    update shalllineup
+    set paytimecalc = #{paytimecalc,jdbcType=VARCHAR},
+      lineupnumber = #{lineupnumber,jdbcType=VARCHAR},
+      lineupmoney = #{lineupmoney,jdbcType=DOUBLE},
+      lineuptime = #{lineuptime,jdbcType=DATE}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>

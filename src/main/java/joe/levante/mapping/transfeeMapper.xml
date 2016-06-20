@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="joe.levante.dao.transfeeMapper" >
+  <resultMap id="BaseResultMap" type="joe.levante.model.transfee" >
+    <id column="id" property="id" jdbcType="INTEGER" />
+    <result column="userid" property="userid" jdbcType="VARCHAR" />
+    <result column="transTime" property="transtime" jdbcType="TIMESTAMP" />
+    <result column="fee" property="fee" jdbcType="DECIMAL" />
+    <result column="pid" property="pid" jdbcType="VARCHAR" />
+    <result column="transType" property="transtype" jdbcType="VARCHAR" />
+    <result column="account" property="account" jdbcType="VARCHAR" />
+    <result column="zfbTransNum" property="zfbtransnum" jdbcType="VARCHAR" />
+  </resultMap>
+  <sql id="Base_Column_List" >
+    id, userid, transTime, fee, pid, transType, account, zfbTransNum
+  </sql>
+  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+    select 
+    <include refid="Base_Column_List" />
+    from transfee
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+    delete from transfee
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="joe.levante.model.transfee" >
+    insert into transfee (id, userid, transTime, 
+      fee, pid, transType, 
+      account, zfbTransNum)
+    values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=VARCHAR}, #{transtime,jdbcType=TIMESTAMP}, 
+      #{fee,jdbcType=DECIMAL}, #{pid,jdbcType=VARCHAR}, #{transtype,jdbcType=VARCHAR}, 
+      #{account,jdbcType=VARCHAR}, #{zfbtransnum,jdbcType=VARCHAR})
+  </insert>
+  <insert id="insertSelective" parameterType="joe.levante.model.transfee" >
+    insert into transfee
+    <trim prefix="(" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        id,
+      </if>
+      <if test="userid != null" >
+        userid,
+      </if>
+      <if test="transtime != null" >
+        transTime,
+      </if>
+      <if test="fee != null" >
+        fee,
+      </if>
+      <if test="pid != null" >
+        pid,
+      </if>
+      <if test="transtype != null" >
+        transType,
+      </if>
+      <if test="account != null" >
+        account,
+      </if>
+      <if test="zfbtransnum != null" >
+        zfbTransNum,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides="," >
+      <if test="id != null" >
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null" >
+        #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="transtime != null" >
+        #{transtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fee != null" >
+        #{fee,jdbcType=DECIMAL},
+      </if>
+      <if test="pid != null" >
+        #{pid,jdbcType=VARCHAR},
+      </if>
+      <if test="transtype != null" >
+        #{transtype,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null" >
+        #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="zfbtransnum != null" >
+        #{zfbtransnum,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="joe.levante.model.transfee" >
+    update transfee
+    <set >
+      <if test="userid != null" >
+        userid = #{userid,jdbcType=VARCHAR},
+      </if>
+      <if test="transtime != null" >
+        transTime = #{transtime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="fee != null" >
+        fee = #{fee,jdbcType=DECIMAL},
+      </if>
+      <if test="pid != null" >
+        pid = #{pid,jdbcType=VARCHAR},
+      </if>
+      <if test="transtype != null" >
+        transType = #{transtype,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null" >
+        account = #{account,jdbcType=VARCHAR},
+      </if>
+      <if test="zfbtransnum != null" >
+        zfbTransNum = #{zfbtransnum,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="joe.levante.model.transfee" >
+    update transfee
+    set userid = #{userid,jdbcType=VARCHAR},
+      transTime = #{transtime,jdbcType=TIMESTAMP},
+      fee = #{fee,jdbcType=DECIMAL},
+      pid = #{pid,jdbcType=VARCHAR},
+      transType = #{transtype,jdbcType=VARCHAR},
+      account = #{account,jdbcType=VARCHAR},
+      zfbTransNum = #{zfbtransnum,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+</mapper>
