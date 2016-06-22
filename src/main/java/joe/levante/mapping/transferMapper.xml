@@ -1,28 +1,28 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="joe.levante.dao.transferMapper" >
-  <resultMap id="BaseResultMap" type="joe.levante.model.transfer" >
-    <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="transferid" property="transferid" jdbcType="INTEGER" />
-    <result column="transfertime" property="transfertime" jdbcType="DATE" />
-    <result column="transfermoney" property="transfermoney" jdbcType="DOUBLE" />
-    <result column="transactionnum" property="transactionnum" jdbcType="VARCHAR" />
-    <result column="account" property="account" jdbcType="VARCHAR" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="joe.levante.dao.transferMapper">
+  <resultMap id="BaseResultMap" type="joe.levante.model.transfer">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="transferid" jdbcType="INTEGER" property="transferid" />
+    <result column="transfertime" jdbcType="DATE" property="transfertime" />
+    <result column="transfermoney" jdbcType="DOUBLE" property="transfermoney" />
+    <result column="transactionnum" jdbcType="VARCHAR" property="transactionnum" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
   </resultMap>
-  <sql id="Base_Column_List" >
+  <sql id="Base_Column_List">
     id, transferid, transfertime, transfermoney, transactionnum, account
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from transfer
     where id = #{id,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from transfer
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="joe.levante.model.transfer" >
+  <insert id="insert" parameterType="joe.levante.model.transfer">
     insert into transfer (id, transferid, transfertime, 
       transfermoney, transactionnum, account
       )
@@ -30,71 +30,173 @@
       #{transfermoney,jdbcType=DOUBLE}, #{transactionnum,jdbcType=VARCHAR}, #{account,jdbcType=VARCHAR}
       )
   </insert>
-  <insert id="insertSelective" parameterType="joe.levante.model.transfer" >
+  <insert id="insertSelective" parameterType="joe.levante.model.transfer">
     insert into transfer
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
         id,
       </if>
-      <if test="transferid != null" >
+      <if test="transferid != null">
         transferid,
       </if>
-      <if test="transfertime != null" >
+      <if test="transfertime != null">
         transfertime,
       </if>
-      <if test="transfermoney != null" >
+      <if test="transfermoney != null">
         transfermoney,
       </if>
-      <if test="transactionnum != null" >
+      <if test="transactionnum != null">
         transactionnum,
       </if>
-      <if test="account != null" >
+      <if test="account != null">
         account,
       </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="transferid != null" >
+      <if test="transferid != null">
         #{transferid,jdbcType=INTEGER},
       </if>
-      <if test="transfertime != null" >
+      <if test="transfertime != null">
         #{transfertime,jdbcType=DATE},
       </if>
-      <if test="transfermoney != null" >
+      <if test="transfermoney != null">
         #{transfermoney,jdbcType=DOUBLE},
       </if>
-      <if test="transactionnum != null" >
+      <if test="transactionnum != null">
         #{transactionnum,jdbcType=VARCHAR},
       </if>
-      <if test="account != null" >
+      <if test="account != null">
         #{account,jdbcType=VARCHAR},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="joe.levante.model.transfer" >
+  <update id="updateByPrimaryKeySelective" parameterType="joe.levante.model.transfer">
     update transfer
-    <set >
-      <if test="transferid != null" >
+    <set>
+      <if test="transferid != null">
         transferid = #{transferid,jdbcType=INTEGER},
       </if>
-      <if test="transfertime != null" >
+      <if test="transfertime != null">
         transfertime = #{transfertime,jdbcType=DATE},
       </if>
-      <if test="transfermoney != null" >
+      <if test="transfermoney != null">
         transfermoney = #{transfermoney,jdbcType=DOUBLE},
       </if>
-      <if test="transactionnum != null" >
+      <if test="transactionnum != null">
         transactionnum = #{transactionnum,jdbcType=VARCHAR},
       </if>
-      <if test="account != null" >
+      <if test="account != null">
         account = #{account,jdbcType=VARCHAR},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="joe.levante.model.transfer" >
+  <update id="updateByPrimaryKey" parameterType="joe.levante.model.transfer">
+    update transfer
+    set transferid = #{transferid,jdbcType=INTEGER},
+      transfertime = #{transfertime,jdbcType=DATE},
+      transfermoney = #{transfermoney,jdbcType=DOUBLE},
+      transactionnum = #{transactionnum,jdbcType=VARCHAR},
+      account = #{account,jdbcType=VARCHAR}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="joe.levante.model.transfer">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="transferid" jdbcType="INTEGER" property="transferid" />
+    <result column="transfertime" jdbcType="DATE" property="transfertime" />
+    <result column="transfermoney" jdbcType="DOUBLE" property="transfermoney" />
+    <result column="transactionnum" jdbcType="VARCHAR" property="transactionnum" />
+    <result column="account" jdbcType="VARCHAR" property="account" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, transferid, transfertime, transfermoney, transactionnum, account
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from transfer
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from transfer
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="joe.levante.model.transfer">
+    insert into transfer (id, transferid, transfertime, 
+      transfermoney, transactionnum, account
+      )
+    values (#{id,jdbcType=INTEGER}, #{transferid,jdbcType=INTEGER}, #{transfertime,jdbcType=DATE}, 
+      #{transfermoney,jdbcType=DOUBLE}, #{transactionnum,jdbcType=VARCHAR}, #{account,jdbcType=VARCHAR}
+      )
+  </insert>
+  <insert id="insertSelective" parameterType="joe.levante.model.transfer">
+    insert into transfer
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="transferid != null">
+        transferid,
+      </if>
+      <if test="transfertime != null">
+        transfertime,
+      </if>
+      <if test="transfermoney != null">
+        transfermoney,
+      </if>
+      <if test="transactionnum != null">
+        transactionnum,
+      </if>
+      <if test="account != null">
+        account,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="transferid != null">
+        #{transferid,jdbcType=INTEGER},
+      </if>
+      <if test="transfertime != null">
+        #{transfertime,jdbcType=DATE},
+      </if>
+      <if test="transfermoney != null">
+        #{transfermoney,jdbcType=DOUBLE},
+      </if>
+      <if test="transactionnum != null">
+        #{transactionnum,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null">
+        #{account,jdbcType=VARCHAR},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="joe.levante.model.transfer">
+    update transfer
+    <set>
+      <if test="transferid != null">
+        transferid = #{transferid,jdbcType=INTEGER},
+      </if>
+      <if test="transfertime != null">
+        transfertime = #{transfertime,jdbcType=DATE},
+      </if>
+      <if test="transfermoney != null">
+        transfermoney = #{transfermoney,jdbcType=DOUBLE},
+      </if>
+      <if test="transactionnum != null">
+        transactionnum = #{transactionnum,jdbcType=VARCHAR},
+      </if>
+      <if test="account != null">
+        account = #{account,jdbcType=VARCHAR},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="joe.levante.model.transfer">
     update transfer
     set transferid = #{transferid,jdbcType=INTEGER},
       transfertime = #{transfertime,jdbcType=DATE},

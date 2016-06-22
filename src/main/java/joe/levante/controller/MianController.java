@@ -1,7 +1,5 @@
 package joe.levante.controller;
 import java.io.IOException;
-import javax.servlet.http.HttpServletRequest;  
-import javax.servlet.http.HttpServletResponse;  
 import net.sf.json.JSONArray;  
 import net.sf.json.JSONObject;  
 import java.util.ArrayList;   
@@ -19,7 +17,7 @@ public class MianController {
         return "index";
     }
 	
-	@RequestMapping("/getTestJson")
+	/*@RequestMapping("/getTestJson")
 	public void getTestJson(HttpServletRequest request,HttpServletResponse response) throws IOException {
 		List m = (List) new  ArrayList();  
         JSONArray jsons = new JSONArray();  
@@ -35,5 +33,5 @@ public class MianController {
             jsons.add(jsonObject);  
         }  
         response.getWriter().print(jsons.toString()) ;   
-	}
+	}*/
 }

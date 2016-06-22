@@ -1,53 +1,53 @@
-<?xml version="1.0" encoding="UTF-8" ?>
-<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
-<mapper namespace="joe.levante.dao.userallMapper" >
-  <resultMap id="BaseResultMap" type="joe.levante.model.userall" >
-    <id column="id" property="id" jdbcType="INTEGER" />
-    <result column="userid" property="userid" jdbcType="INTEGER" />
-    <result column="password" property="password" jdbcType="VARCHAR" />
-    <result column="refereeid" property="refereeid" jdbcType="INTEGER" />
-    <result column="registime" property="registime" jdbcType="DATE" />
-    <result column="perfecttime" property="perfecttime" jdbcType="DATE" />
-    <result column="landtime" property="landtime" jdbcType="INTEGER" />
-    <result column="lastlandtime" property="lastlandtime" jdbcType="DATE" />
-    <result column="name" property="name" jdbcType="VARCHAR" />
-    <result column="identitycard" property="identitycard" jdbcType="VARCHAR" />
-    <result column="sex" property="sex" jdbcType="VARCHAR" />
-    <result column="age" property="age" jdbcType="INTEGER" />
-    <result column="birthday" property="birthday" jdbcType="DATE" />
-    <result column="cardattributive" property="cardattributive" jdbcType="VARCHAR" />
-    <result column="usertype" property="usertype" jdbcType="VARCHAR" />
-    <result column="phonenumber" property="phonenumber" jdbcType="VARCHAR" />
-    <result column="phoneattributive" property="phoneattributive" jdbcType="VARCHAR" />
-    <result column="bodyattributive" property="bodyattributive" jdbcType="VARCHAR" />
-    <result column="paytreasurable" property="paytreasurable" jdbcType="VARCHAR" />
-    <result column="smallletter" property="smallletter" jdbcType="VARCHAR" />
-    <result column="businessbank" property="businessbank" jdbcType="VARCHAR" />
-    <result column="mailaddress" property="mailaddress" jdbcType="VARCHAR" />
-    <result column="usershare" property="usershare" jdbcType="DOUBLE" />
-    <result column="shopshare" property="shopshare" jdbcType="DOUBLE" />
-    <result column="payintegral" property="payintegral" jdbcType="INTEGER" />
-    <result column="distribution" property="distribution" jdbcType="INTEGER" />
-    <result column="payover" property="payover" jdbcType="DOUBLE" />
-    <result column="paytotal" property="paytotal" jdbcType="DOUBLE" />
-    <result column="paynumber" property="paynumber" jdbcType="INTEGER" />
-    <result column="tradetotal" property="tradetotal" jdbcType="DOUBLE" />
-    <result column="tradenumber" property="tradenumber" jdbcType="INTEGER" />
-    <result column="recommendtotal" property="recommendtotal" jdbcType="DOUBLE" />
-    <result column="recommendshopnum" property="recommendshopnum" jdbcType="INTEGER" />
-    <result column="recommendusernum" property="recommendusernum" jdbcType="INTEGER" />
-    <result column="areanumber" property="areanumber" jdbcType="INTEGER" />
-    <result column="areatotal" property="areatotal" jdbcType="DOUBLE" />
-    <result column="alllineup" property="alllineup" jdbcType="INTEGER" />
-    <result column="newlineup" property="newlineup" jdbcType="INTEGER" />
-    <result column="historylineup" property="historylineup" jdbcType="INTEGER" />
-    <result column="shalllineup" property="shalllineup" jdbcType="INTEGER" />
-    <result column="landnumber" property="landnumber" jdbcType="INTEGER" />
-    <result column="landlasttime" property="landlasttime" jdbcType="TIMESTAMP" />
-    <result column="vipstatus" property="vipstatus" jdbcType="INTEGER" />
-    <result column="returnfeeto" property="returnfeeto" jdbcType="DECIMAL" />
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="joe.levante.dao.userallMapper">
+  <resultMap id="BaseResultMap" type="joe.levante.model.userall">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="userid" jdbcType="INTEGER" property="userid" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="refereeid" jdbcType="INTEGER" property="refereeid" />
+    <result column="registime" jdbcType="DATE" property="registime" />
+    <result column="perfecttime" jdbcType="DATE" property="perfecttime" />
+    <result column="landtime" jdbcType="INTEGER" property="landtime" />
+    <result column="lastlandtime" jdbcType="DATE" property="lastlandtime" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="identitycard" jdbcType="VARCHAR" property="identitycard" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="cardattributive" jdbcType="VARCHAR" property="cardattributive" />
+    <result column="usertype" jdbcType="VARCHAR" property="usertype" />
+    <result column="phonenumber" jdbcType="VARCHAR" property="phonenumber" />
+    <result column="phoneattributive" jdbcType="VARCHAR" property="phoneattributive" />
+    <result column="bodyattributive" jdbcType="VARCHAR" property="bodyattributive" />
+    <result column="paytreasurable" jdbcType="VARCHAR" property="paytreasurable" />
+    <result column="smallletter" jdbcType="VARCHAR" property="smallletter" />
+    <result column="businessbank" jdbcType="VARCHAR" property="businessbank" />
+    <result column="mailaddress" jdbcType="VARCHAR" property="mailaddress" />
+    <result column="usershare" jdbcType="DOUBLE" property="usershare" />
+    <result column="shopshare" jdbcType="DOUBLE" property="shopshare" />
+    <result column="payintegral" jdbcType="INTEGER" property="payintegral" />
+    <result column="distribution" jdbcType="INTEGER" property="distribution" />
+    <result column="payover" jdbcType="DOUBLE" property="payover" />
+    <result column="paytotal" jdbcType="DOUBLE" property="paytotal" />
+    <result column="paynumber" jdbcType="INTEGER" property="paynumber" />
+    <result column="tradetotal" jdbcType="DOUBLE" property="tradetotal" />
+    <result column="tradenumber" jdbcType="INTEGER" property="tradenumber" />
+    <result column="recommendtotal" jdbcType="DOUBLE" property="recommendtotal" />
+    <result column="recommendshopnum" jdbcType="INTEGER" property="recommendshopnum" />
+    <result column="recommendusernum" jdbcType="INTEGER" property="recommendusernum" />
+    <result column="areanumber" jdbcType="INTEGER" property="areanumber" />
+    <result column="areatotal" jdbcType="DOUBLE" property="areatotal" />
+    <result column="alllineup" jdbcType="INTEGER" property="alllineup" />
+    <result column="newlineup" jdbcType="INTEGER" property="newlineup" />
+    <result column="historylineup" jdbcType="INTEGER" property="historylineup" />
+    <result column="shalllineup" jdbcType="INTEGER" property="shalllineup" />
+    <result column="landnumber" jdbcType="INTEGER" property="landnumber" />
+    <result column="landlasttime" jdbcType="TIMESTAMP" property="landlasttime" />
+    <result column="vipstatus" jdbcType="INTEGER" property="vipstatus" />
+    <result column="returnfeeto" jdbcType="DECIMAL" property="returnfeeto" />
   </resultMap>
-  <sql id="Base_Column_List" >
+  <sql id="Base_Column_List">
     id, userid, password, refereeid, registime, perfecttime, landtime, lastlandtime, 
     name, identitycard, sex, age, birthday, cardattributive, usertype, phonenumber, phoneattributive, 
     bodyattributive, paytreasurable, smallletter, businessbank, mailaddress, usershare, 
@@ -55,17 +55,17 @@
     recommendtotal, recommendshopnum, recommendusernum, areanumber, areatotal, alllineup, 
     newlineup, historylineup, shalllineup, landnumber, landlasttime, vipstatus, returnfeeto
   </sql>
-  <select id="selectByPrimaryKey" resultMap="BaseResultMap" parameterType="java.lang.Integer" >
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
     select 
     <include refid="Base_Column_List" />
     from userall
     where id = #{id,jdbcType=INTEGER}
   </select>
-  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer" >
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
     delete from userall
     where id = #{id,jdbcType=INTEGER}
   </delete>
-  <insert id="insert" parameterType="joe.levante.model.userall" >
+  <insert id="insert" parameterType="joe.levante.model.userall">
     insert into userall (id, userid, password, 
       refereeid, registime, perfecttime, 
       landtime, lastlandtime, name, 
@@ -97,413 +97,962 @@
       #{shalllineup,jdbcType=INTEGER}, #{landnumber,jdbcType=INTEGER}, #{landlasttime,jdbcType=TIMESTAMP}, 
       #{vipstatus,jdbcType=INTEGER}, #{returnfeeto,jdbcType=DECIMAL})
   </insert>
-  <insert id="insertSelective" parameterType="joe.levante.model.userall" >
+  <insert id="insertSelective" parameterType="joe.levante.model.userall">
     insert into userall
-    <trim prefix="(" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
         id,
       </if>
-      <if test="userid != null" >
+      <if test="userid != null">
         userid,
       </if>
-      <if test="password != null" >
+      <if test="password != null">
         password,
       </if>
-      <if test="refereeid != null" >
+      <if test="refereeid != null">
         refereeid,
       </if>
-      <if test="registime != null" >
+      <if test="registime != null">
         registime,
       </if>
-      <if test="perfecttime != null" >
+      <if test="perfecttime != null">
         perfecttime,
       </if>
-      <if test="landtime != null" >
+      <if test="landtime != null">
         landtime,
       </if>
-      <if test="lastlandtime != null" >
+      <if test="lastlandtime != null">
         lastlandtime,
       </if>
-      <if test="name != null" >
+      <if test="name != null">
         name,
       </if>
-      <if test="identitycard != null" >
+      <if test="identitycard != null">
         identitycard,
       </if>
-      <if test="sex != null" >
+      <if test="sex != null">
         sex,
       </if>
-      <if test="age != null" >
+      <if test="age != null">
         age,
       </if>
-      <if test="birthday != null" >
+      <if test="birthday != null">
         birthday,
       </if>
-      <if test="cardattributive != null" >
+      <if test="cardattributive != null">
         cardattributive,
       </if>
-      <if test="usertype != null" >
+      <if test="usertype != null">
         usertype,
       </if>
-      <if test="phonenumber != null" >
+      <if test="phonenumber != null">
         phonenumber,
       </if>
-      <if test="phoneattributive != null" >
+      <if test="phoneattributive != null">
         phoneattributive,
       </if>
-      <if test="bodyattributive != null" >
+      <if test="bodyattributive != null">
         bodyattributive,
       </if>
-      <if test="paytreasurable != null" >
+      <if test="paytreasurable != null">
         paytreasurable,
       </if>
-      <if test="smallletter != null" >
+      <if test="smallletter != null">
         smallletter,
       </if>
-      <if test="businessbank != null" >
+      <if test="businessbank != null">
         businessbank,
       </if>
-      <if test="mailaddress != null" >
+      <if test="mailaddress != null">
         mailaddress,
       </if>
-      <if test="usershare != null" >
+      <if test="usershare != null">
         usershare,
       </if>
-      <if test="shopshare != null" >
+      <if test="shopshare != null">
         shopshare,
       </if>
-      <if test="payintegral != null" >
+      <if test="payintegral != null">
         payintegral,
       </if>
-      <if test="distribution != null" >
+      <if test="distribution != null">
         distribution,
       </if>
-      <if test="payover != null" >
+      <if test="payover != null">
         payover,
       </if>
-      <if test="paytotal != null" >
+      <if test="paytotal != null">
         paytotal,
       </if>
-      <if test="paynumber != null" >
+      <if test="paynumber != null">
         paynumber,
       </if>
-      <if test="tradetotal != null" >
+      <if test="tradetotal != null">
         tradetotal,
       </if>
-      <if test="tradenumber != null" >
+      <if test="tradenumber != null">
         tradenumber,
       </if>
-      <if test="recommendtotal != null" >
+      <if test="recommendtotal != null">
         recommendtotal,
       </if>
-      <if test="recommendshopnum != null" >
+      <if test="recommendshopnum != null">
         recommendshopnum,
       </if>
-      <if test="recommendusernum != null" >
+      <if test="recommendusernum != null">
         recommendusernum,
       </if>
-      <if test="areanumber != null" >
+      <if test="areanumber != null">
         areanumber,
       </if>
-      <if test="areatotal != null" >
+      <if test="areatotal != null">
         areatotal,
       </if>
-      <if test="alllineup != null" >
+      <if test="alllineup != null">
         alllineup,
       </if>
-      <if test="newlineup != null" >
+      <if test="newlineup != null">
         newlineup,
       </if>
-      <if test="historylineup != null" >
+      <if test="historylineup != null">
         historylineup,
       </if>
-      <if test="shalllineup != null" >
+      <if test="shalllineup != null">
         shalllineup,
       </if>
-      <if test="landnumber != null" >
+      <if test="landnumber != null">
         landnumber,
       </if>
-      <if test="landlasttime != null" >
+      <if test="landlasttime != null">
         landlasttime,
       </if>
-      <if test="vipstatus != null" >
+      <if test="vipstatus != null">
         vipstatus,
       </if>
-      <if test="returnfeeto != null" >
+      <if test="returnfeeto != null">
         returnfeeto,
       </if>
     </trim>
-    <trim prefix="values (" suffix=")" suffixOverrides="," >
-      <if test="id != null" >
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
         #{id,jdbcType=INTEGER},
       </if>
-      <if test="userid != null" >
+      <if test="userid != null">
         #{userid,jdbcType=INTEGER},
       </if>
-      <if test="password != null" >
+      <if test="password != null">
         #{password,jdbcType=VARCHAR},
       </if>
-      <if test="refereeid != null" >
+      <if test="refereeid != null">
         #{refereeid,jdbcType=INTEGER},
       </if>
-      <if test="registime != null" >
+      <if test="registime != null">
         #{registime,jdbcType=DATE},
       </if>
-      <if test="perfecttime != null" >
+      <if test="perfecttime != null">
         #{perfecttime,jdbcType=DATE},
       </if>
-      <if test="landtime != null" >
+      <if test="landtime != null">
         #{landtime,jdbcType=INTEGER},
       </if>
-      <if test="lastlandtime != null" >
+      <if test="lastlandtime != null">
         #{lastlandtime,jdbcType=DATE},
       </if>
-      <if test="name != null" >
+      <if test="name != null">
         #{name,jdbcType=VARCHAR},
       </if>
-      <if test="identitycard != null" >
+      <if test="identitycard != null">
         #{identitycard,jdbcType=VARCHAR},
       </if>
-      <if test="sex != null" >
+      <if test="sex != null">
         #{sex,jdbcType=VARCHAR},
       </if>
-      <if test="age != null" >
+      <if test="age != null">
         #{age,jdbcType=INTEGER},
       </if>
-      <if test="birthday != null" >
+      <if test="birthday != null">
         #{birthday,jdbcType=DATE},
       </if>
-      <if test="cardattributive != null" >
+      <if test="cardattributive != null">
         #{cardattributive,jdbcType=VARCHAR},
       </if>
-      <if test="usertype != null" >
+      <if test="usertype != null">
         #{usertype,jdbcType=VARCHAR},
       </if>
-      <if test="phonenumber != null" >
+      <if test="phonenumber != null">
         #{phonenumber,jdbcType=VARCHAR},
       </if>
-      <if test="phoneattributive != null" >
+      <if test="phoneattributive != null">
         #{phoneattributive,jdbcType=VARCHAR},
       </if>
-      <if test="bodyattributive != null" >
+      <if test="bodyattributive != null">
         #{bodyattributive,jdbcType=VARCHAR},
       </if>
-      <if test="paytreasurable != null" >
+      <if test="paytreasurable != null">
         #{paytreasurable,jdbcType=VARCHAR},
       </if>
-      <if test="smallletter != null" >
+      <if test="smallletter != null">
         #{smallletter,jdbcType=VARCHAR},
       </if>
-      <if test="businessbank != null" >
+      <if test="businessbank != null">
         #{businessbank,jdbcType=VARCHAR},
       </if>
-      <if test="mailaddress != null" >
+      <if test="mailaddress != null">
         #{mailaddress,jdbcType=VARCHAR},
       </if>
-      <if test="usershare != null" >
+      <if test="usershare != null">
         #{usershare,jdbcType=DOUBLE},
       </if>
-      <if test="shopshare != null" >
+      <if test="shopshare != null">
         #{shopshare,jdbcType=DOUBLE},
       </if>
-      <if test="payintegral != null" >
+      <if test="payintegral != null">
         #{payintegral,jdbcType=INTEGER},
       </if>
-      <if test="distribution != null" >
+      <if test="distribution != null">
         #{distribution,jdbcType=INTEGER},
       </if>
-      <if test="payover != null" >
+      <if test="payover != null">
         #{payover,jdbcType=DOUBLE},
       </if>
-      <if test="paytotal != null" >
+      <if test="paytotal != null">
         #{paytotal,jdbcType=DOUBLE},
       </if>
-      <if test="paynumber != null" >
+      <if test="paynumber != null">
         #{paynumber,jdbcType=INTEGER},
       </if>
-      <if test="tradetotal != null" >
+      <if test="tradetotal != null">
         #{tradetotal,jdbcType=DOUBLE},
       </if>
-      <if test="tradenumber != null" >
+      <if test="tradenumber != null">
         #{tradenumber,jdbcType=INTEGER},
       </if>
-      <if test="recommendtotal != null" >
+      <if test="recommendtotal != null">
         #{recommendtotal,jdbcType=DOUBLE},
       </if>
-      <if test="recommendshopnum != null" >
+      <if test="recommendshopnum != null">
         #{recommendshopnum,jdbcType=INTEGER},
       </if>
-      <if test="recommendusernum != null" >
+      <if test="recommendusernum != null">
         #{recommendusernum,jdbcType=INTEGER},
       </if>
-      <if test="areanumber != null" >
+      <if test="areanumber != null">
         #{areanumber,jdbcType=INTEGER},
       </if>
-      <if test="areatotal != null" >
+      <if test="areatotal != null">
         #{areatotal,jdbcType=DOUBLE},
       </if>
-      <if test="alllineup != null" >
+      <if test="alllineup != null">
         #{alllineup,jdbcType=INTEGER},
       </if>
-      <if test="newlineup != null" >
+      <if test="newlineup != null">
         #{newlineup,jdbcType=INTEGER},
       </if>
-      <if test="historylineup != null" >
+      <if test="historylineup != null">
         #{historylineup,jdbcType=INTEGER},
       </if>
-      <if test="shalllineup != null" >
+      <if test="shalllineup != null">
         #{shalllineup,jdbcType=INTEGER},
       </if>
-      <if test="landnumber != null" >
+      <if test="landnumber != null">
         #{landnumber,jdbcType=INTEGER},
       </if>
-      <if test="landlasttime != null" >
+      <if test="landlasttime != null">
         #{landlasttime,jdbcType=TIMESTAMP},
       </if>
-      <if test="vipstatus != null" >
+      <if test="vipstatus != null">
         #{vipstatus,jdbcType=INTEGER},
       </if>
-      <if test="returnfeeto != null" >
+      <if test="returnfeeto != null">
         #{returnfeeto,jdbcType=DECIMAL},
       </if>
     </trim>
   </insert>
-  <update id="updateByPrimaryKeySelective" parameterType="joe.levante.model.userall" >
+  <update id="updateByPrimaryKeySelective" parameterType="joe.levante.model.userall">
     update userall
-    <set >
-      <if test="userid != null" >
+    <set>
+      <if test="userid != null">
         userid = #{userid,jdbcType=INTEGER},
       </if>
-      <if test="password != null" >
+      <if test="password != null">
         password = #{password,jdbcType=VARCHAR},
       </if>
-      <if test="refereeid != null" >
+      <if test="refereeid != null">
         refereeid = #{refereeid,jdbcType=INTEGER},
       </if>
-      <if test="registime != null" >
+      <if test="registime != null">
         registime = #{registime,jdbcType=DATE},
       </if>
-      <if test="perfecttime != null" >
+      <if test="perfecttime != null">
         perfecttime = #{perfecttime,jdbcType=DATE},
       </if>
-      <if test="landtime != null" >
+      <if test="landtime != null">
         landtime = #{landtime,jdbcType=INTEGER},
       </if>
-      <if test="lastlandtime != null" >
+      <if test="lastlandtime != null">
         lastlandtime = #{lastlandtime,jdbcType=DATE},
       </if>
-      <if test="name != null" >
+      <if test="name != null">
         name = #{name,jdbcType=VARCHAR},
       </if>
-      <if test="identitycard != null" >
+      <if test="identitycard != null">
         identitycard = #{identitycard,jdbcType=VARCHAR},
       </if>
-      <if test="sex != null" >
+      <if test="sex != null">
         sex = #{sex,jdbcType=VARCHAR},
       </if>
-      <if test="age != null" >
+      <if test="age != null">
         age = #{age,jdbcType=INTEGER},
       </if>
-      <if test="birthday != null" >
+      <if test="birthday != null">
         birthday = #{birthday,jdbcType=DATE},
       </if>
-      <if test="cardattributive != null" >
+      <if test="cardattributive != null">
         cardattributive = #{cardattributive,jdbcType=VARCHAR},
       </if>
-      <if test="usertype != null" >
+      <if test="usertype != null">
         usertype = #{usertype,jdbcType=VARCHAR},
       </if>
-      <if test="phonenumber != null" >
+      <if test="phonenumber != null">
         phonenumber = #{phonenumber,jdbcType=VARCHAR},
       </if>
-      <if test="phoneattributive != null" >
+      <if test="phoneattributive != null">
         phoneattributive = #{phoneattributive,jdbcType=VARCHAR},
       </if>
-      <if test="bodyattributive != null" >
+      <if test="bodyattributive != null">
         bodyattributive = #{bodyattributive,jdbcType=VARCHAR},
       </if>
-      <if test="paytreasurable != null" >
+      <if test="paytreasurable != null">
         paytreasurable = #{paytreasurable,jdbcType=VARCHAR},
       </if>
-      <if test="smallletter != null" >
+      <if test="smallletter != null">
         smallletter = #{smallletter,jdbcType=VARCHAR},
       </if>
-      <if test="businessbank != null" >
+      <if test="businessbank != null">
         businessbank = #{businessbank,jdbcType=VARCHAR},
       </if>
-      <if test="mailaddress != null" >
+      <if test="mailaddress != null">
         mailaddress = #{mailaddress,jdbcType=VARCHAR},
       </if>
-      <if test="usershare != null" >
+      <if test="usershare != null">
         usershare = #{usershare,jdbcType=DOUBLE},
       </if>
-      <if test="shopshare != null" >
+      <if test="shopshare != null">
         shopshare = #{shopshare,jdbcType=DOUBLE},
       </if>
-      <if test="payintegral != null" >
+      <if test="payintegral != null">
         payintegral = #{payintegral,jdbcType=INTEGER},
       </if>
-      <if test="distribution != null" >
+      <if test="distribution != null">
         distribution = #{distribution,jdbcType=INTEGER},
       </if>
-      <if test="payover != null" >
+      <if test="payover != null">
         payover = #{payover,jdbcType=DOUBLE},
       </if>
-      <if test="paytotal != null" >
+      <if test="paytotal != null">
         paytotal = #{paytotal,jdbcType=DOUBLE},
       </if>
-      <if test="paynumber != null" >
+      <if test="paynumber != null">
         paynumber = #{paynumber,jdbcType=INTEGER},
       </if>
-      <if test="tradetotal != null" >
+      <if test="tradetotal != null">
         tradetotal = #{tradetotal,jdbcType=DOUBLE},
       </if>
-      <if test="tradenumber != null" >
+      <if test="tradenumber != null">
         tradenumber = #{tradenumber,jdbcType=INTEGER},
       </if>
-      <if test="recommendtotal != null" >
+      <if test="recommendtotal != null">
         recommendtotal = #{recommendtotal,jdbcType=DOUBLE},
       </if>
-      <if test="recommendshopnum != null" >
+      <if test="recommendshopnum != null">
         recommendshopnum = #{recommendshopnum,jdbcType=INTEGER},
       </if>
-      <if test="recommendusernum != null" >
+      <if test="recommendusernum != null">
         recommendusernum = #{recommendusernum,jdbcType=INTEGER},
       </if>
-      <if test="areanumber != null" >
+      <if test="areanumber != null">
         areanumber = #{areanumber,jdbcType=INTEGER},
       </if>
-      <if test="areatotal != null" >
+      <if test="areatotal != null">
         areatotal = #{areatotal,jdbcType=DOUBLE},
       </if>
-      <if test="alllineup != null" >
+      <if test="alllineup != null">
         alllineup = #{alllineup,jdbcType=INTEGER},
       </if>
-      <if test="newlineup != null" >
+      <if test="newlineup != null">
         newlineup = #{newlineup,jdbcType=INTEGER},
       </if>
-      <if test="historylineup != null" >
+      <if test="historylineup != null">
         historylineup = #{historylineup,jdbcType=INTEGER},
       </if>
-      <if test="shalllineup != null" >
+      <if test="shalllineup != null">
         shalllineup = #{shalllineup,jdbcType=INTEGER},
       </if>
-      <if test="landnumber != null" >
+      <if test="landnumber != null">
         landnumber = #{landnumber,jdbcType=INTEGER},
       </if>
-      <if test="landlasttime != null" >
+      <if test="landlasttime != null">
         landlasttime = #{landlasttime,jdbcType=TIMESTAMP},
       </if>
-      <if test="vipstatus != null" >
+      <if test="vipstatus != null">
         vipstatus = #{vipstatus,jdbcType=INTEGER},
       </if>
-      <if test="returnfeeto != null" >
+      <if test="returnfeeto != null">
         returnfeeto = #{returnfeeto,jdbcType=DECIMAL},
       </if>
     </set>
     where id = #{id,jdbcType=INTEGER}
   </update>
-  <update id="updateByPrimaryKey" parameterType="joe.levante.model.userall" >
+  <update id="updateByPrimaryKey" parameterType="joe.levante.model.userall">
+    update userall
+    set userid = #{userid,jdbcType=INTEGER},
+      password = #{password,jdbcType=VARCHAR},
+      refereeid = #{refereeid,jdbcType=INTEGER},
+      registime = #{registime,jdbcType=DATE},
+      perfecttime = #{perfecttime,jdbcType=DATE},
+      landtime = #{landtime,jdbcType=INTEGER},
+      lastlandtime = #{lastlandtime,jdbcType=DATE},
+      name = #{name,jdbcType=VARCHAR},
+      identitycard = #{identitycard,jdbcType=VARCHAR},
+      sex = #{sex,jdbcType=VARCHAR},
+      age = #{age,jdbcType=INTEGER},
+      birthday = #{birthday,jdbcType=DATE},
+      cardattributive = #{cardattributive,jdbcType=VARCHAR},
+      usertype = #{usertype,jdbcType=VARCHAR},
+      phonenumber = #{phonenumber,jdbcType=VARCHAR},
+      phoneattributive = #{phoneattributive,jdbcType=VARCHAR},
+      bodyattributive = #{bodyattributive,jdbcType=VARCHAR},
+      paytreasurable = #{paytreasurable,jdbcType=VARCHAR},
+      smallletter = #{smallletter,jdbcType=VARCHAR},
+      businessbank = #{businessbank,jdbcType=VARCHAR},
+      mailaddress = #{mailaddress,jdbcType=VARCHAR},
+      usershare = #{usershare,jdbcType=DOUBLE},
+      shopshare = #{shopshare,jdbcType=DOUBLE},
+      payintegral = #{payintegral,jdbcType=INTEGER},
+      distribution = #{distribution,jdbcType=INTEGER},
+      payover = #{payover,jdbcType=DOUBLE},
+      paytotal = #{paytotal,jdbcType=DOUBLE},
+      paynumber = #{paynumber,jdbcType=INTEGER},
+      tradetotal = #{tradetotal,jdbcType=DOUBLE},
+      tradenumber = #{tradenumber,jdbcType=INTEGER},
+      recommendtotal = #{recommendtotal,jdbcType=DOUBLE},
+      recommendshopnum = #{recommendshopnum,jdbcType=INTEGER},
+      recommendusernum = #{recommendusernum,jdbcType=INTEGER},
+      areanumber = #{areanumber,jdbcType=INTEGER},
+      areatotal = #{areatotal,jdbcType=DOUBLE},
+      alllineup = #{alllineup,jdbcType=INTEGER},
+      newlineup = #{newlineup,jdbcType=INTEGER},
+      historylineup = #{historylineup,jdbcType=INTEGER},
+      shalllineup = #{shalllineup,jdbcType=INTEGER},
+      landnumber = #{landnumber,jdbcType=INTEGER},
+      landlasttime = #{landlasttime,jdbcType=TIMESTAMP},
+      vipstatus = #{vipstatus,jdbcType=INTEGER},
+      returnfeeto = #{returnfeeto,jdbcType=DECIMAL}
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <resultMap id="BaseResultMap" type="joe.levante.model.userall">
+    <id column="id" jdbcType="INTEGER" property="id" />
+    <result column="userid" jdbcType="INTEGER" property="userid" />
+    <result column="password" jdbcType="VARCHAR" property="password" />
+    <result column="refereeid" jdbcType="INTEGER" property="refereeid" />
+    <result column="registime" jdbcType="DATE" property="registime" />
+    <result column="perfecttime" jdbcType="DATE" property="perfecttime" />
+    <result column="landtime" jdbcType="INTEGER" property="landtime" />
+    <result column="lastlandtime" jdbcType="DATE" property="lastlandtime" />
+    <result column="name" jdbcType="VARCHAR" property="name" />
+    <result column="identitycard" jdbcType="VARCHAR" property="identitycard" />
+    <result column="sex" jdbcType="VARCHAR" property="sex" />
+    <result column="age" jdbcType="INTEGER" property="age" />
+    <result column="birthday" jdbcType="DATE" property="birthday" />
+    <result column="cardattributive" jdbcType="VARCHAR" property="cardattributive" />
+    <result column="usertype" jdbcType="VARCHAR" property="usertype" />
+    <result column="phonenumber" jdbcType="VARCHAR" property="phonenumber" />
+    <result column="phoneattributive" jdbcType="VARCHAR" property="phoneattributive" />
+    <result column="bodyattributive" jdbcType="VARCHAR" property="bodyattributive" />
+    <result column="paytreasurable" jdbcType="VARCHAR" property="paytreasurable" />
+    <result column="smallletter" jdbcType="VARCHAR" property="smallletter" />
+    <result column="businessbank" jdbcType="VARCHAR" property="businessbank" />
+    <result column="mailaddress" jdbcType="VARCHAR" property="mailaddress" />
+    <result column="usershare" jdbcType="DOUBLE" property="usershare" />
+    <result column="shopshare" jdbcType="DOUBLE" property="shopshare" />
+    <result column="payintegral" jdbcType="INTEGER" property="payintegral" />
+    <result column="distribution" jdbcType="INTEGER" property="distribution" />
+    <result column="payover" jdbcType="DOUBLE" property="payover" />
+    <result column="paytotal" jdbcType="DOUBLE" property="paytotal" />
+    <result column="paynumber" jdbcType="INTEGER" property="paynumber" />
+    <result column="tradetotal" jdbcType="DOUBLE" property="tradetotal" />
+    <result column="tradenumber" jdbcType="INTEGER" property="tradenumber" />
+    <result column="recommendtotal" jdbcType="DOUBLE" property="recommendtotal" />
+    <result column="recommendshopnum" jdbcType="INTEGER" property="recommendshopnum" />
+    <result column="recommendusernum" jdbcType="INTEGER" property="recommendusernum" />
+    <result column="areanumber" jdbcType="INTEGER" property="areanumber" />
+    <result column="areatotal" jdbcType="DOUBLE" property="areatotal" />
+    <result column="alllineup" jdbcType="INTEGER" property="alllineup" />
+    <result column="newlineup" jdbcType="INTEGER" property="newlineup" />
+    <result column="historylineup" jdbcType="INTEGER" property="historylineup" />
+    <result column="shalllineup" jdbcType="INTEGER" property="shalllineup" />
+    <result column="landnumber" jdbcType="INTEGER" property="landnumber" />
+    <result column="landlasttime" jdbcType="TIMESTAMP" property="landlasttime" />
+    <result column="vipstatus" jdbcType="INTEGER" property="vipstatus" />
+    <result column="returnfeeto" jdbcType="DECIMAL" property="returnfeeto" />
+  </resultMap>
+  <sql id="Base_Column_List">
+    id, userid, password, refereeid, registime, perfecttime, landtime, lastlandtime, 
+    name, identitycard, sex, age, birthday, cardattributive, usertype, phonenumber, phoneattributive, 
+    bodyattributive, paytreasurable, smallletter, businessbank, mailaddress, usershare, 
+    shopshare, payintegral, distribution, payover, paytotal, paynumber, tradetotal, tradenumber, 
+    recommendtotal, recommendshopnum, recommendusernum, areanumber, areatotal, alllineup, 
+    newlineup, historylineup, shalllineup, landnumber, landlasttime, vipstatus, returnfeeto
+  </sql>
+  <select id="selectByPrimaryKey" parameterType="java.lang.Integer" resultMap="BaseResultMap">
+    select 
+    <include refid="Base_Column_List" />
+    from userall
+    where id = #{id,jdbcType=INTEGER}
+  </select>
+  <delete id="deleteByPrimaryKey" parameterType="java.lang.Integer">
+    delete from userall
+    where id = #{id,jdbcType=INTEGER}
+  </delete>
+  <insert id="insert" parameterType="joe.levante.model.userall">
+    insert into userall (id, userid, password, 
+      refereeid, registime, perfecttime, 
+      landtime, lastlandtime, name, 
+      identitycard, sex, age, 
+      birthday, cardattributive, usertype, 
+      phonenumber, phoneattributive, bodyattributive, 
+      paytreasurable, smallletter, businessbank, 
+      mailaddress, usershare, shopshare, 
+      payintegral, distribution, payover, 
+      paytotal, paynumber, tradetotal, 
+      tradenumber, recommendtotal, recommendshopnum, 
+      recommendusernum, areanumber, areatotal, 
+      alllineup, newlineup, historylineup, 
+      shalllineup, landnumber, landlasttime, 
+      vipstatus, returnfeeto)
+    values (#{id,jdbcType=INTEGER}, #{userid,jdbcType=INTEGER}, #{password,jdbcType=VARCHAR}, 
+      #{refereeid,jdbcType=INTEGER}, #{registime,jdbcType=DATE}, #{perfecttime,jdbcType=DATE}, 
+      #{landtime,jdbcType=INTEGER}, #{lastlandtime,jdbcType=DATE}, #{name,jdbcType=VARCHAR}, 
+      #{identitycard,jdbcType=VARCHAR}, #{sex,jdbcType=VARCHAR}, #{age,jdbcType=INTEGER}, 
+      #{birthday,jdbcType=DATE}, #{cardattributive,jdbcType=VARCHAR}, #{usertype,jdbcType=VARCHAR}, 
+      #{phonenumber,jdbcType=VARCHAR}, #{phoneattributive,jdbcType=VARCHAR}, #{bodyattributive,jdbcType=VARCHAR}, 
+      #{paytreasurable,jdbcType=VARCHAR}, #{smallletter,jdbcType=VARCHAR}, #{businessbank,jdbcType=VARCHAR}, 
+      #{mailaddress,jdbcType=VARCHAR}, #{usershare,jdbcType=DOUBLE}, #{shopshare,jdbcType=DOUBLE}, 
+      #{payintegral,jdbcType=INTEGER}, #{distribution,jdbcType=INTEGER}, #{payover,jdbcType=DOUBLE}, 
+      #{paytotal,jdbcType=DOUBLE}, #{paynumber,jdbcType=INTEGER}, #{tradetotal,jdbcType=DOUBLE}, 
+      #{tradenumber,jdbcType=INTEGER}, #{recommendtotal,jdbcType=DOUBLE}, #{recommendshopnum,jdbcType=INTEGER}, 
+      #{recommendusernum,jdbcType=INTEGER}, #{areanumber,jdbcType=INTEGER}, #{areatotal,jdbcType=DOUBLE}, 
+      #{alllineup,jdbcType=INTEGER}, #{newlineup,jdbcType=INTEGER}, #{historylineup,jdbcType=INTEGER}, 
+      #{shalllineup,jdbcType=INTEGER}, #{landnumber,jdbcType=INTEGER}, #{landlasttime,jdbcType=TIMESTAMP}, 
+      #{vipstatus,jdbcType=INTEGER}, #{returnfeeto,jdbcType=DECIMAL})
+  </insert>
+  <insert id="insertSelective" parameterType="joe.levante.model.userall">
+    insert into userall
+    <trim prefix="(" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        id,
+      </if>
+      <if test="userid != null">
+        userid,
+      </if>
+      <if test="password != null">
+        password,
+      </if>
+      <if test="refereeid != null">
+        refereeid,
+      </if>
+      <if test="registime != null">
+        registime,
+      </if>
+      <if test="perfecttime != null">
+        perfecttime,
+      </if>
+      <if test="landtime != null">
+        landtime,
+      </if>
+      <if test="lastlandtime != null">
+        lastlandtime,
+      </if>
+      <if test="name != null">
+        name,
+      </if>
+      <if test="identitycard != null">
+        identitycard,
+      </if>
+      <if test="sex != null">
+        sex,
+      </if>
+      <if test="age != null">
+        age,
+      </if>
+      <if test="birthday != null">
+        birthday,
+      </if>
+      <if test="cardattributive != null">
+        cardattributive,
+      </if>
+      <if test="usertype != null">
+        usertype,
+      </if>
+      <if test="phonenumber != null">
+        phonenumber,
+      </if>
+      <if test="phoneattributive != null">
+        phoneattributive,
+      </if>
+      <if test="bodyattributive != null">
+        bodyattributive,
+      </if>
+      <if test="paytreasurable != null">
+        paytreasurable,
+      </if>
+      <if test="smallletter != null">
+        smallletter,
+      </if>
+      <if test="businessbank != null">
+        businessbank,
+      </if>
+      <if test="mailaddress != null">
+        mailaddress,
+      </if>
+      <if test="usershare != null">
+        usershare,
+      </if>
+      <if test="shopshare != null">
+        shopshare,
+      </if>
+      <if test="payintegral != null">
+        payintegral,
+      </if>
+      <if test="distribution != null">
+        distribution,
+      </if>
+      <if test="payover != null">
+        payover,
+      </if>
+      <if test="paytotal != null">
+        paytotal,
+      </if>
+      <if test="paynumber != null">
+        paynumber,
+      </if>
+      <if test="tradetotal != null">
+        tradetotal,
+      </if>
+      <if test="tradenumber != null">
+        tradenumber,
+      </if>
+      <if test="recommendtotal != null">
+        recommendtotal,
+      </if>
+      <if test="recommendshopnum != null">
+        recommendshopnum,
+      </if>
+      <if test="recommendusernum != null">
+        recommendusernum,
+      </if>
+      <if test="areanumber != null">
+        areanumber,
+      </if>
+      <if test="areatotal != null">
+        areatotal,
+      </if>
+      <if test="alllineup != null">
+        alllineup,
+      </if>
+      <if test="newlineup != null">
+        newlineup,
+      </if>
+      <if test="historylineup != null">
+        historylineup,
+      </if>
+      <if test="shalllineup != null">
+        shalllineup,
+      </if>
+      <if test="landnumber != null">
+        landnumber,
+      </if>
+      <if test="landlasttime != null">
+        landlasttime,
+      </if>
+      <if test="vipstatus != null">
+        vipstatus,
+      </if>
+      <if test="returnfeeto != null">
+        returnfeeto,
+      </if>
+    </trim>
+    <trim prefix="values (" suffix=")" suffixOverrides=",">
+      <if test="id != null">
+        #{id,jdbcType=INTEGER},
+      </if>
+      <if test="userid != null">
+        #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="password != null">
+        #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="refereeid != null">
+        #{refereeid,jdbcType=INTEGER},
+      </if>
+      <if test="registime != null">
+        #{registime,jdbcType=DATE},
+      </if>
+      <if test="perfecttime != null">
+        #{perfecttime,jdbcType=DATE},
+      </if>
+      <if test="landtime != null">
+        #{landtime,jdbcType=INTEGER},
+      </if>
+      <if test="lastlandtime != null">
+        #{lastlandtime,jdbcType=DATE},
+      </if>
+      <if test="name != null">
+        #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="identitycard != null">
+        #{identitycard,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        #{age,jdbcType=INTEGER},
+      </if>
+      <if test="birthday != null">
+        #{birthday,jdbcType=DATE},
+      </if>
+      <if test="cardattributive != null">
+        #{cardattributive,jdbcType=VARCHAR},
+      </if>
+      <if test="usertype != null">
+        #{usertype,jdbcType=VARCHAR},
+      </if>
+      <if test="phonenumber != null">
+        #{phonenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneattributive != null">
+        #{phoneattributive,jdbcType=VARCHAR},
+      </if>
+      <if test="bodyattributive != null">
+        #{bodyattributive,jdbcType=VARCHAR},
+      </if>
+      <if test="paytreasurable != null">
+        #{paytreasurable,jdbcType=VARCHAR},
+      </if>
+      <if test="smallletter != null">
+        #{smallletter,jdbcType=VARCHAR},
+      </if>
+      <if test="businessbank != null">
+        #{businessbank,jdbcType=VARCHAR},
+      </if>
+      <if test="mailaddress != null">
+        #{mailaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="usershare != null">
+        #{usershare,jdbcType=DOUBLE},
+      </if>
+      <if test="shopshare != null">
+        #{shopshare,jdbcType=DOUBLE},
+      </if>
+      <if test="payintegral != null">
+        #{payintegral,jdbcType=INTEGER},
+      </if>
+      <if test="distribution != null">
+        #{distribution,jdbcType=INTEGER},
+      </if>
+      <if test="payover != null">
+        #{payover,jdbcType=DOUBLE},
+      </if>
+      <if test="paytotal != null">
+        #{paytotal,jdbcType=DOUBLE},
+      </if>
+      <if test="paynumber != null">
+        #{paynumber,jdbcType=INTEGER},
+      </if>
+      <if test="tradetotal != null">
+        #{tradetotal,jdbcType=DOUBLE},
+      </if>
+      <if test="tradenumber != null">
+        #{tradenumber,jdbcType=INTEGER},
+      </if>
+      <if test="recommendtotal != null">
+        #{recommendtotal,jdbcType=DOUBLE},
+      </if>
+      <if test="recommendshopnum != null">
+        #{recommendshopnum,jdbcType=INTEGER},
+      </if>
+      <if test="recommendusernum != null">
+        #{recommendusernum,jdbcType=INTEGER},
+      </if>
+      <if test="areanumber != null">
+        #{areanumber,jdbcType=INTEGER},
+      </if>
+      <if test="areatotal != null">
+        #{areatotal,jdbcType=DOUBLE},
+      </if>
+      <if test="alllineup != null">
+        #{alllineup,jdbcType=INTEGER},
+      </if>
+      <if test="newlineup != null">
+        #{newlineup,jdbcType=INTEGER},
+      </if>
+      <if test="historylineup != null">
+        #{historylineup,jdbcType=INTEGER},
+      </if>
+      <if test="shalllineup != null">
+        #{shalllineup,jdbcType=INTEGER},
+      </if>
+      <if test="landnumber != null">
+        #{landnumber,jdbcType=INTEGER},
+      </if>
+      <if test="landlasttime != null">
+        #{landlasttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vipstatus != null">
+        #{vipstatus,jdbcType=INTEGER},
+      </if>
+      <if test="returnfeeto != null">
+        #{returnfeeto,jdbcType=DECIMAL},
+      </if>
+    </trim>
+  </insert>
+  <update id="updateByPrimaryKeySelective" parameterType="joe.levante.model.userall">
+    update userall
+    <set>
+      <if test="userid != null">
+        userid = #{userid,jdbcType=INTEGER},
+      </if>
+      <if test="password != null">
+        password = #{password,jdbcType=VARCHAR},
+      </if>
+      <if test="refereeid != null">
+        refereeid = #{refereeid,jdbcType=INTEGER},
+      </if>
+      <if test="registime != null">
+        registime = #{registime,jdbcType=DATE},
+      </if>
+      <if test="perfecttime != null">
+        perfecttime = #{perfecttime,jdbcType=DATE},
+      </if>
+      <if test="landtime != null">
+        landtime = #{landtime,jdbcType=INTEGER},
+      </if>
+      <if test="lastlandtime != null">
+        lastlandtime = #{lastlandtime,jdbcType=DATE},
+      </if>
+      <if test="name != null">
+        name = #{name,jdbcType=VARCHAR},
+      </if>
+      <if test="identitycard != null">
+        identitycard = #{identitycard,jdbcType=VARCHAR},
+      </if>
+      <if test="sex != null">
+        sex = #{sex,jdbcType=VARCHAR},
+      </if>
+      <if test="age != null">
+        age = #{age,jdbcType=INTEGER},
+      </if>
+      <if test="birthday != null">
+        birthday = #{birthday,jdbcType=DATE},
+      </if>
+      <if test="cardattributive != null">
+        cardattributive = #{cardattributive,jdbcType=VARCHAR},
+      </if>
+      <if test="usertype != null">
+        usertype = #{usertype,jdbcType=VARCHAR},
+      </if>
+      <if test="phonenumber != null">
+        phonenumber = #{phonenumber,jdbcType=VARCHAR},
+      </if>
+      <if test="phoneattributive != null">
+        phoneattributive = #{phoneattributive,jdbcType=VARCHAR},
+      </if>
+      <if test="bodyattributive != null">
+        bodyattributive = #{bodyattributive,jdbcType=VARCHAR},
+      </if>
+      <if test="paytreasurable != null">
+        paytreasurable = #{paytreasurable,jdbcType=VARCHAR},
+      </if>
+      <if test="smallletter != null">
+        smallletter = #{smallletter,jdbcType=VARCHAR},
+      </if>
+      <if test="businessbank != null">
+        businessbank = #{businessbank,jdbcType=VARCHAR},
+      </if>
+      <if test="mailaddress != null">
+        mailaddress = #{mailaddress,jdbcType=VARCHAR},
+      </if>
+      <if test="usershare != null">
+        usershare = #{usershare,jdbcType=DOUBLE},
+      </if>
+      <if test="shopshare != null">
+        shopshare = #{shopshare,jdbcType=DOUBLE},
+      </if>
+      <if test="payintegral != null">
+        payintegral = #{payintegral,jdbcType=INTEGER},
+      </if>
+      <if test="distribution != null">
+        distribution = #{distribution,jdbcType=INTEGER},
+      </if>
+      <if test="payover != null">
+        payover = #{payover,jdbcType=DOUBLE},
+      </if>
+      <if test="paytotal != null">
+        paytotal = #{paytotal,jdbcType=DOUBLE},
+      </if>
+      <if test="paynumber != null">
+        paynumber = #{paynumber,jdbcType=INTEGER},
+      </if>
+      <if test="tradetotal != null">
+        tradetotal = #{tradetotal,jdbcType=DOUBLE},
+      </if>
+      <if test="tradenumber != null">
+        tradenumber = #{tradenumber,jdbcType=INTEGER},
+      </if>
+      <if test="recommendtotal != null">
+        recommendtotal = #{recommendtotal,jdbcType=DOUBLE},
+      </if>
+      <if test="recommendshopnum != null">
+        recommendshopnum = #{recommendshopnum,jdbcType=INTEGER},
+      </if>
+      <if test="recommendusernum != null">
+        recommendusernum = #{recommendusernum,jdbcType=INTEGER},
+      </if>
+      <if test="areanumber != null">
+        areanumber = #{areanumber,jdbcType=INTEGER},
+      </if>
+      <if test="areatotal != null">
+        areatotal = #{areatotal,jdbcType=DOUBLE},
+      </if>
+      <if test="alllineup != null">
+        alllineup = #{alllineup,jdbcType=INTEGER},
+      </if>
+      <if test="newlineup != null">
+        newlineup = #{newlineup,jdbcType=INTEGER},
+      </if>
+      <if test="historylineup != null">
+        historylineup = #{historylineup,jdbcType=INTEGER},
+      </if>
+      <if test="shalllineup != null">
+        shalllineup = #{shalllineup,jdbcType=INTEGER},
+      </if>
+      <if test="landnumber != null">
+        landnumber = #{landnumber,jdbcType=INTEGER},
+      </if>
+      <if test="landlasttime != null">
+        landlasttime = #{landlasttime,jdbcType=TIMESTAMP},
+      </if>
+      <if test="vipstatus != null">
+        vipstatus = #{vipstatus,jdbcType=INTEGER},
+      </if>
+      <if test="returnfeeto != null">
+        returnfeeto = #{returnfeeto,jdbcType=DECIMAL},
+      </if>
+    </set>
+    where id = #{id,jdbcType=INTEGER}
+  </update>
+  <update id="updateByPrimaryKey" parameterType="joe.levante.model.userall">
     update userall
     set userid = #{userid,jdbcType=INTEGER},
       password = #{password,jdbcType=VARCHAR},
